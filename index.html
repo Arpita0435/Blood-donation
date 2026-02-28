@@ -1,0 +1,352 @@
+!DOCTYPE html>
+<html>
+<head>
+<title>BLOOD donation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("bg.jpg");
+  min-height: 80%;
+}
+
+.menu {
+  display: none;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+button {
+  background: #e53935;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #c62828;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.section {
+  padding: 50px 20px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">BLOOD AVAILABLE</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">WHERE</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Open 24 hours</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-black" style="font-size:90px">SAVE<br>LIFES</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">BLOOD BANK near SIT</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT</span></h5>
+    <p>Blood donation saves millions of lives every year, yet many hospitals struggle with shortages due to poor coordination and lack of awareness. Our platform connects blood donors, patients, hospitals, and blood banks on a single digital system to ensure quick and reliable access to blood during emergencies. Users can easily register as donors, request blood, and locate nearby donors in real time. The platform promotes voluntary blood donation, raises awareness, and simplifies the entire process using technology. Our goal is to make blood donation faster, safer, and more accessible so that no life is lost due to unavailability of blood.</p>
+    <p>Our mission is to leverage technology for social good and ensure that no life is lost due to the unavailability of blood. Together, we can save lives, one donation at a time.</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>Donate Blood Save LIfe</i></p>
+      <p>Be someones HERO</p>
+
+      
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:800px">
+
+    <h5 class="w3-center w3-padding-48">
+      <span class="w3-tag w3-red w3-wide">BLOOD AVAILABILITY</span>
+    </h5>
+
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Positive');" id="myLink">
+        <div class="w3-col s6 m3 tablink">Positive</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Negative');">
+        <div class="w3-col s6 m3 tablink">Negative</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Rare');">
+        <div class="w3-col s6 m3 tablink">Rare</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Emergency');">
+        <div class="w3-col s6 m3 tablink">Emergency</div>
+      </a>
+    </div>
+
+    <!-- Positive Blood Groups -->
+    <div id="Positive" class="w3-container menu w3-padding-48 w3-card">
+      <h5>🩸 A+  <span class="w3-right w3-text-green">Available</span></h5>
+      <h5>🩸 B+  <span class="w3-right w3-text-green">Available</span></h5>
+      <h5>🩸 AB+ <span class="w3-right w3-text-orange">Low Stock</span></h5>
+      <h5>🩸 O+  <span class="w3-right w3-text-green">Available</span></h5>
+    </div>
+
+    <!-- Negative Blood Groups -->
+    <div id="Negative" class="w3-container menu w3-padding-48 w3-card">
+      <h5>🩸 A-  <span class="w3-right w3-text-orange">Low Stock</span></h5>
+      <h5>🩸 B-  <span class="w3-right w3-text-red">Urgent Need</span></h5>
+      <h5>🩸 AB- <span class="w3-right w3-text-red">Urgent Need</span></h5>
+      <h5>🩸 O-  <span class="w3-right w3-text-red">Critical</span></h5>
+    </div>
+
+    <!-- Rare Groups -->
+    <div id="Rare" class="w3-container menu w3-padding-48 w3-card">
+      <h5>🩸 Bombay Blood Group <span class="w3-right w3-text-red">Critical</span></h5>
+      <h5>🩸 RH-null <span class="w3-right w3-text-red">Extremely Rare</span></h5>
+    </div>
+
+    <!-- Emergency -->
+    <div id="Emergency" class="w3-container menu w3-padding-48 w3-card">
+      <h5>🚨 Emergency Requests</h5>
+      <p class="w3-text-grey">Immediate donors needed for:</p>
+      <ul class="w3-ul">
+        <li>O- : Accident Case – Mumbai</li>
+        <li>B- : Surgery – Pune</li>
+        <li>AB- : ICU Patient – Thane</li>
+      </ul>
+      <button class="w3-button w3-red w3-margin-top">Request Blood Now</button>
+    </div>
+
+  </div>
+</div>
+
+
+
+      <!-- Contact / Blood Request Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:750px">
+
+    <h5 class="w3-center w3-padding-48">
+      <span class="w3-tag w3-red w3-wide">CONTACT FOR BLOOD</span>
+    </h5>
+
+    <p class="w3-center w3-large">
+      Need blood urgently? Fill the form below and we’ll connect you with nearby donors instantly.
+    </p>
+
+    <img src="bgg.jpg" class="w3-image w3-round" style="width:100%">
+
+    <p>
+      <span class="w3-tag w3-red">Emergency!</span> Please provide accurate details for faster help.
+    </p>
+
+    <form class="w3-container w3-card w3-padding-32 w3-white w3-margin-top" action="#" method="post">
+
+      <p>
+        <input class="w3-input w3-border" type="text" placeholder="Patient Name" required>
+      </p>
+
+      <p>
+        <input class="w3-input w3-border" type="tel" placeholder="Contact Number" required>
+      </p>
+
+      <p>
+        <input class="w3-input w3-border" type="text" placeholder="Hospital Name & Location" required>
+      </p>
+
+      <p>
+        <select class="w3-select w3-border" required>
+          <option value="" disabled selected>Select Blood Group</option>
+          <option>A+</option>
+          <option>A-</option>
+          <option>B+</option>
+          <option>B-</option>
+          <option>AB+</option>
+          <option>AB-</option>
+          <option>O+</option>
+          <option>O-</option>
+        </select>
+      </p>
+
+      <p>
+        <input class="w3-input w3-border" type="number" placeholder="Units Required" required>
+      </p>
+
+      <p>
+        <input class="w3-input w3-border" type="datetime-local" required>
+      </p>
+
+      <p>
+        <textarea class="w3-input w3-border" rows="3" placeholder="Additional Notes (optional)"></textarea>
+      </p>
+
+      <p>
+        <button class="w3-button w3-red w3-block w3-padding-large w3-hover-dark-grey">
+          🚨 Submit Blood Request
+        </button>
+      </p>
+
+    </form>
+
+  </div>
+</div>
+
+<!-- Donor Search Section -->
+<div class="w3-container" id="search" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:750px;">
+
+    <h5 class="w3-center w3-padding-48">
+      <span class="w3-tag w3-red w3-wide">FIND A BLOOD DONOR</span>
+    </h5>
+
+    <div class="w3-card w3-padding-32 w3-white">
+
+      <div class="w3-row-padding">
+        <div class="w3-third">
+          <select class="w3-select w3-border" id="bloodGroup">
+            <option value="" disabled selected>Blood Group</option>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+            <option>O+</option>
+            <option>O-</option>
+          </select>
+        </div>
+
+        <div class="w3-third">
+          <input class="w3-input w3-border" type="text" id="city" placeholder="Enter City">
+        </div>
+
+        <div class="w3-third">
+          <button class="w3-button w3-red w3-block" onclick="searchDonor()">
+            🔍 Search
+          </button>
+        </div>
+      </div>
+
+      <div id="result" class="w3-margin-top"></div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by The pirates</p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+
+
+
+const donors = [
+  {name:"Amit Sharma", group:"O+", city:"Mumbai", phone:"9876543210"},
+  {name:"Neha Patil", group:"A+", city:"Pune", phone:"9898989898"},
+  {name:"Rahul Verma", group:"B-", city:"Mumbai", phone:"9123456789"},
+  {name:"Sneha Kulkarni", group:"AB+", city:"Nagpur", phone:"9012345678"},
+  {name:"Rohan Deshmukh", group:"O-", city:"Thane", phone:"9988776655"}
+];
+
+function searchDonor() {
+  const group = document.getElementById("bloodGroup").value;
+  const city = document.getElementById("city").value.toLowerCase();
+  let result = "";
+
+  const matches = donors.filter(d =>
+    d.group === group && d.city.toLowerCase().includes(city)
+  );
+
+  if (matches.length === 0) {
+    result = `<p class="w3-text-red">No donors found. Try another search.</p>`;
+  } else {
+    matches.forEach(d => {
+      result += `
+        <div class="w3-card w3-padding w3-margin-bottom">
+          <h5>${d.name}</h5>
+          <p>Blood Group: ${d.group}</p>
+          <p>City: ${d.city}</p>
+          <p>Contact: ${d.phone}</p>
+          <a href="tel:${d.phone}" class="w3-button w3-green">Call Now</a>
+        </div>
+      `;
+    });
+  }
+
+  document.getElementById("result").innerHTML = result;
+}
+
+</script>
+
+</body>
+</html>
